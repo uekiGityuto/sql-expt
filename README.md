@@ -43,6 +43,7 @@ select count(*) from users;
 explain select count(*) from users where status = 2;
 explain analyze select count(*) from users where status = 2;
 analyze table users;
+truncate table users;
 ```
 
 ## ログアウト
@@ -83,6 +84,7 @@ select count(*) from users;
 explain select count(*) from users where status = 2;
 explain analyze select count(*) from users where status = 2;
 analyze users;
+truncate table user;
 ```
 
 ## ログアウト
