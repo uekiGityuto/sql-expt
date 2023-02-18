@@ -37,12 +37,12 @@ call user_insert({作成したい件数});
 ## よく使う SQL コマンド
 
 ```
-show create table user;
-show indexes from user;
-select count(*) from user;
-explain select count(*) from user where status = 2;
-explain analyze select count(*) from user where status = 2;
-analyze table user;
+show create table users;
+show indexes from users;
+select count(*) from users;
+explain select count(*) from users where status = 2;
+explain analyze select count(*) from users where status = 2;
+analyze table users;
 ```
 
 ## ログアウト
@@ -77,11 +77,12 @@ call user_insert({作成したい件数});
 ## よく使う SQL コマンド
 
 ```
+\timing
 \d users
 select count(*) from users;
 explain select count(*) from users where status = 2;
 explain analyze select count(*) from users where status = 2;
-analyze table user;
+analyze users;
 ```
 
 ## ログアウト
