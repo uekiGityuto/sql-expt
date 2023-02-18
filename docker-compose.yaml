@@ -1,0 +1,32 @@
+version: '3.9'
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:13.4
+    environment:
+      POSTGRES_DB: expt
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "55432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+  mysql:
+    image: mysql:8.0.29
+    platform: linux/x86_64
+    container_name: mysql
+    environment:
+      MYSQL_ALLOW_EMPTY_PASSWORD: "yes"
+      MYSQL_DATABASE: expt
+      MYSQL_USER: mysql
+      MYSQL_PASSWORD: mysql
+    volumes:
+      - mysql_data:/var/lib/mysql
+      - $PWD/mysql/conf.d:/etc/mysql/conf.d:cached
+    ports:
+      - "33306:3306"
+
+volumes:
+  postgres_data:
+  mysql_data:
