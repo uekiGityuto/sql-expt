@@ -31,19 +31,19 @@ mysql -umysql -pmysql -D expt
 その後に以下を実行
 
 ```
-call user_insert({作成したい件数});
+CALL user_insert({作成したい件数});
 ```
 
 ## よく使う SQL コマンド
 
 ```
-show create table users;
-show indexes from users;
-select count(*) from users;
-explain select count(*) from users where status = 2;
-explain analyze select count(*) from users where status = 2;
-analyze table users;
-truncate table users;
+SHOW CREATE TABLE users;
+SHOW INDEXES FROM users;
+SELECT COUNT(*) FROM users;
+EXPLAIN SELECT COUNT(*) FROM users WHERE status = 2;
+EXPLAIN ANALYZE SELECT COUNT(*) FROM users WHERE status = 2;
+ANALYZE TABLE users;
+TRUNCATE TABLE users;
 ```
 
 ## ログアウト
@@ -72,7 +72,7 @@ psql -U postgres -d expt
 その後に以下を実行
 
 ```
-call user_insert({作成したい件数});
+CALL user_insert({作成したい件数});
 ```
 
 ## よく使う SQL コマンド
@@ -80,11 +80,11 @@ call user_insert({作成したい件数});
 ```
 \timing
 \d users
-select count(*) from users;
-explain select count(*) from users where status = 2;
-explain analyze select count(*) from users where status = 2;
-analyze users;
-truncate table user;
+SELECT COUNT(*) FROM users;
+EXPLAIN SELECT COUNT(*) FROM users WHERE status = 2;
+EXPLAIN ANALYZE SELECT COUNT(*) FROM users WHERE status = 2;
+ANALYZE users;
+TRUNCATE TABLE user;
 ```
 
 ## ログアウト
