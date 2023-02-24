@@ -84,7 +84,7 @@ SELECT COUNT(*) FROM users;
 EXPLAIN SELECT COUNT(*) FROM users WHERE status = 2;
 EXPLAIN ANALYZE SELECT COUNT(*) FROM users WHERE status = 2;
 ANALYZE users;
-TRUNCATE TABLE user;
+TRUNCATE TABLE users;
 ```
 
 ## ログアウト
